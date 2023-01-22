@@ -11,14 +11,28 @@
 
 let choice = ["Rock", "Paper", "Scissors"]
 
-function getComputerChoice(choice) {
+function getComputerChoice() {
     return choice[Math.floor(Math.random() * choice.length)];
 }
+const computerSelection = getComputerChoice(choice);
 
-console.log(getComputerChoice(choice))
+console.log(computerSelection)
 
+
+function capitalize(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+}
+
+let getPlayerChoice = prompt("What do you choose?",);
+
+const playerSelection = capitalize(getPlayerChoice)
+
+console.log(playerSelection)
+
+function playRound(playerSelection, computerSelection) {
+}
 
 
 </script>
 
-</html>emoji
+</html>
