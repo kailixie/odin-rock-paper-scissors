@@ -9,17 +9,68 @@
 
 <script>
 
-let choice = ["ROCK", "PAPER", "SCISSORS"]
+let choice = ["rock", "paper", "scissors"]
+
+let rounds = 0;
+let computerScore = 0;
+let playerScore = 0;
 
 function computerPlay(choice) {
-    return choice[Math.floor(Math.random() *choice.length)];
+    return choice[Math.floor(Math.random() * choice.length)];
 }
 
-let computerSelection = computerPlay(choice)
 
 
+function playRound(playerSelection, computerChoice){
+    let playerChoice = playerSelection.toLowerCase()
+    computerChoice = computerPlay(choice)
+    if (playerChoice === computerChoice) {
+          return "It is a tie";
+        }
+        if (playerChoice === "rock") {
+          if (computerChoice === "scissors") {
+            playerScore++
+            return "Player Wins";
+          } else {
+            computerScore++
+            return "Computer Wins";
+          }
+        }
+        if (playerChoice === "paper") {
+          if (computerChoice === "scissors") {
 
-console.log(computerSelection)
+            computerScore++
+            return "Computer Wins";
+          } else {
+
+            playerScore++
+            return "Player Wins";
+          }
+        }
+        if (playerChoice === "scissors") {
+          if (computerChoice === "rock") {
+
+            computerScore++
+            return "Computer Wins";
+          } else {
+            playerScore++
+            return "Player Wins";
+          }
+        }
+    }
+
+function game() {
+
+    for(let rounds = 1; rounds < 5; rounds++) {
+        let playerSelection = prompt("ROCK, PAPER, or SCISSORS?")
+        console.log(playRound(playerSelection))
+    //    console.log("Computer picked: ", computerChoice, "Player picked: ", playerSelection)
+        console.log("Player: ", playerScore, "Computer: ", computerScore)
+
+    }
+}
+
+game();
 
 </script>
 
