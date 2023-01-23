@@ -61,17 +61,17 @@ function game() {
         console.log("Player: ", playerScore, "Computer: ", computerScore)
     }
     if (playerScore > computerScore) {
-        console.log("PLAYER WINS!");
+        return "PLAYER WINS!";
     }
     else if (playerScore < computerScore) {
-        console.log("COMPUTER WINS!");
+        return "COMPUTER WINS!";
     }
     else {
-        console.log("TIE!")
+        return "TIE!";
     }
 }
 
-game();
+console.log(game());
 
 </script>
 
