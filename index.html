@@ -9,7 +9,17 @@
 
 <script>
 
+let choice = ["ROCK", "PAPER", "SCISSORS"]
 
+function computerPlay(choice) {
+    return choice[Math.floor(Math.random() *choice.length)];
+}
+
+let computerSelection = computerPlay(choice)
+
+
+
+console.log(computerSelection)
 
 </script>
 
