@@ -60,4 +60,9 @@ function playRound(playerSelection, computerChoice){
 //    }
 //}
 
-console.log(game());
+// console.log(game());
+
+const rock = document.querySelector("#rock");
+rock.addEventListener("click", () => {
+
+})

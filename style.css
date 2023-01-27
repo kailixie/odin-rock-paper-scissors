@@ -1,0 +1,50 @@
+html {
+    font-size: 10px;
+    background-color: darkgreen;
+  }
+
+body {
+    background-size: cover;
+    margin: 0;
+    padding: 0; 
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+
+.container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-around;
+    align-items: center;
+    margin: 100px;
+    gap: 100px;
+}
+
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 5px solid black;
+    height: 575px;
+    width: 475px;
+}
+
+.right {
+    display: flex;
+    border: 5px solid black;
+    justify-self: end;
+    height: 575px;
+    width: 475px;
+}
+
+.choices {
+    gap: 10px;
+    align-items: 
+}
+
+button {
+    padding: 5px;
+}
