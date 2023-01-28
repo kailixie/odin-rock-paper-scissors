@@ -54,25 +54,6 @@ function gameOver() {
 
 // UI
 
-var imgLoad = [];
-function preload () {
-  for (let i = 0; i < preload.arguments.length; i++) {
-    imgLoad[i] = new Image()
-    imgLoad[i].src = preload.arguments[i]
-  }
-  preload(
-    "/img/choices.png",
-    "/img/leftPaper.gif",
-    "/img/leftRock.gif", 
-    "/img/leftScissors.gif",
-    "/img/computerPicks.png",
-    "/img/rightPaper.gif",
-    "/img/rightRock.gif", 
-    "/img/rightScissors.gif"
-  )
-}
-
-
 const playerScoreCount = document.getElementById("playerScore")
 const computerScoreCount = document.getElementById("computerScore")
 const playerAnimation = document.getElementById("playerAnimation")
@@ -112,25 +93,31 @@ function playerChooses(playerChoice) {
 function updateChoices(playerChoice, computerChoice) {
   switch (playerChoice) {
     case "rock":
-      playerWeapons.src="/img/leftRock.gif"
+      playerWeapons.src="img/leftRock.gif"
+      playerWeapons.alt="gif of pixel hand showing player choice rock"
       break
     case "scissors":
-      playerWeapons.src="/img/leftScissors.gif"
+      playerWeapons.src="img/leftScissors.gif"
+      playerWeapons.alt="gif of pixel hand showing player choice scissors"
       break
     case "paper":
-      playerWeapons.src="/img/leftPaper.gif"
+      playerWeapons.src="img/leftPaper.gif"
+      playerWeapons.alt="gif of pixel hand showing player choice paper"
       break
   }
 
   switch (computerChoice) {
     case "rock":
-      computerWeapons.src="/img/rightRock.gif"
+      computerWeapons.src="img/rightRock.gif"
+      computerWeapons.alt="gif of pixel hand showing player choice rock"
       break
     case "scissors":
-      computerWeapons.src="/img/rightScissors.gif"
+      computerWeapons.src="img/rightScissors.gif"
+      computerWeapons.alt="gif of pixel hand showing player choice scissors"
       break
     case "paper":
-      computerWeapons.src="/img/rightPaper.gif"
+      computerWeapons.src="img/rightPaper.gif"
+      computerWeapons.alt="gif of pixel hand showing player choice paper"
       break
   }
 }
