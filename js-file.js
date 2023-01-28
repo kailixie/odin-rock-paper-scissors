@@ -54,6 +54,25 @@ function gameOver() {
 
 // UI
 
+var imgLoad = [];
+function preload () {
+  for (let i = 0; i < preload.arguments.length; i++) {
+    imgLoad[i] = new Image()
+    imgLoad[i].src = preload.arguments[i]
+  }
+  preload(
+    "/img/choices.png",
+    "/img/leftPaper.gif",
+    "/img/leftRock.gif", 
+    "/img/leftScissors.gif",
+    "/img/computerPicks.png",
+    "/img/rightPaper.gif",
+    "/img/rightRock.gif", 
+    "/img/rightScissors.gif"
+  )
+}
+
+
 const playerScoreCount = document.getElementById("playerScore")
 const computerScoreCount = document.getElementById("computerScore")
 const playerAnimation = document.getElementById("playerAnimation")
