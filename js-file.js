@@ -15,34 +15,37 @@ function playRound(playerChoice, computerChoice){
     if (playerChoice === computerChoice) {
       roundWinner = "tie";
         }
-        if (playerChoice === "rock") {
-          if (computerChoice === "scissors") {
-            playerScore++
-            roundWinner = "player";
-          } else {
-            computerScore++
-            roundWinner = "computer";
-          }
-        }
-        if (playerChoice === "paper") {
-          if (computerChoice === "scissors") {
-            computerScore++
-            roundWinner = "computer";
-          } else {
-            playerScore++
-            roundWinner = "player";
-          }
-        }
-        if (playerChoice === "scissors") {
-          if (computerChoice === "rock") {
-            computerScore++
-            roundWinner = "computer";
-          } else {
-            playerScore++
-            roundWinner = "player";
-          }
-        }
+    else if (playerChoice === "rock") {
+      if (computerChoice === "scissors") {
+          playerScore++
+          roundWinner = "player";
+      }
+      else {
+        computerScore++
+        roundWinner = "computer";
+      }
     }
+    else if (playerChoice === "paper") {
+      if (computerChoice === "scissors") {
+        computerScore++
+        roundWinner = "computer";
+      }
+      else {
+        playerScore++
+        roundWinner = "player";
+      }
+    }
+    else if (playerChoice === "scissors") {
+      if (computerChoice === "rock") {
+        computerScore++
+        roundWinner = "computer";
+      }
+      else {
+        playerScore++
+        roundWinner = "player";
+      }
+    }
+  }
 
 // game ends when computer or player reaches 5 wins
 function gameOver() {
