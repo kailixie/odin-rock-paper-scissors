@@ -11,41 +11,46 @@
 
 <body> 
 
-<div class="container">
+  <header class="header">
+    <h1 class="title"> ROCK PAPER SCISSORS</h1>
+  </header>
 
-  <div class="left"> 
+  <div class="container">
 
-    <div class="playerScore">Player: </div>
+    <div class="left"> 
 
-    <div class="animations">
-      <img id="choices" src="/img/choices.png" style="display: none;">
-      <img id="leftPaper" src="/img/leftPaper.gif" style="display: ;"/>
-      <img id="leftRock" src="/img/leftRock.gif" style="display:none;"/>
-      <img id="leftScissors" src="/img/leftScissors.gif" style="display:none;"/>
+      <p class="score" id="playerScore">Player: 0</p>
+
+      <div class="animations">
+        <img id="playerWeapons" src="/img/choices.png"/>
+      </div>
+
+      <div class="choices">
+        <button id="rockBtn">ROCK</button>
+        <button id="scissorsBtn">SCISSORS</button>
+        <button id="paperBtn">PAPER</button>
+      </div>
+
     </div>
 
-    <div class="choices">
-      <button id="rock">ROCK</button>
-      <button id="scissors">SCISSORS</button>
-      <button id="paper">PAPER</button>
+
+      <div class="right">
+
+        <p class="score" id="computerScore">Computer: 0</p>
+
+        <div class="animations">
+          <img id="computerWeapons" src="/img/computerPicks.png"/>
+        </div>
+    
+      </div>
     </div>
 
+  <div class="modal" id="gameOverModal">
+    <p class="modalTitle" id="finalWinner"></p>
+    <button id="restartBtn">Play Again</button>
   </div>
 
-
-  <div class="right">
-
-    <div class="computerScore"> Computer: </div>
-
-    <div class="animations">
-      <img id="rightPaper" src="/img/rightPaper.gif" style="display:;"/>
-      <img id="rightRock" src="/img/rightRock.gif" style="display:none;"/>
-      <img id="rightScissors" src="/img/rightScissors.gif" style="display:none;"/>
-    </div>
- 
-</div>
-
-</div>
+  <div class="overlay" id="overlay"></div>
 
 </body>
 
