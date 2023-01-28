@@ -25,7 +25,7 @@ button {
 img {
     width: 470px;
     height: 325px;
-    object-fit:contain;
+    object-fit: contain;
 }
 
 .header {

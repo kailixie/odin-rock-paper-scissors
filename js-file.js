@@ -20,7 +20,7 @@ function playRound(playerChoice, computerChoice){
           playerScore++
           roundWinner = "player";
       }
-      else {
+      else if (computerChoice === "paper") {
         computerScore++
         roundWinner = "computer";
       }
@@ -30,7 +30,7 @@ function playRound(playerChoice, computerChoice){
         computerScore++
         roundWinner = "computer";
       }
-      else {
+      else if (computerChoice === "rock") {
         playerScore++
         roundWinner = "player";
       }
@@ -40,7 +40,7 @@ function playRound(playerChoice, computerChoice){
         computerScore++
         roundWinner = "computer";
       }
-      else {
+      else if (computerChoice === "paper") {
         playerScore++
         roundWinner = "player";
       }
@@ -69,8 +69,8 @@ const restartBtn = document.getElementById("restartBtn")
 rockBtn.addEventListener("click", () => playerChooses("rock"))
 scissorsBtn.addEventListener("click", () => playerChooses("scissors"))
 paperBtn.addEventListener("click", () => playerChooses("paper"))
-restartBtn.addEventListener("click", replay())
-overlay.addEventListener("click", closeGameOverModal())
+restartBtn.addEventListener("click", () => replay())
+overlay.addEventListener("click", () => closeGameOverModal())
 
 // player chooses weapon
 function playerChooses(playerChoice) {
