@@ -35,16 +35,40 @@ body {
 .right {
     display: flex;
     border: 5px solid black;
-    justify-self: end;
+    flex-direction: column;
     height: 575px;
     width: 475px;
 }
 
+.right > .animations {
+    padding-bottom: 150px;
+    align-self: flex-end;
+}
+
+.playerScore,
+.computerScore {
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.animations {
+    display: flex;
+
+}
+
+img {
+    width: 425px;
+    height: 425px;
+}
+
 .choices {
     gap: 10px;
-    align-items: 
+    display: flex;
+    justify-content: space-between;
 }
 
 button {
-    padding: 5px;
+    margin: 15px;
+    height: 50px;
+    width: 100px;
 }
