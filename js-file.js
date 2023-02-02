@@ -82,7 +82,7 @@ function playerChooses(playerChoice) {
   const computerChoice = computerPlay()
   playRound(playerChoice, computerChoice)
   updateChoices(playerChoice, computerChoice)
-  updateScore()
+  updateScore(roundWinner)
 
   if (gameOver()) {
     openGameOverModal()
@@ -122,9 +122,11 @@ function updateChoices(playerChoice, computerChoice) {
   }
 }
 
-function updateScore() {
-  playerScoreCount.textContent = `Player: ${playerScore}`
-  computerScoreCount.textContent = `Computer: ${computerScore}`
+function updateScore(roundWinner) {
+  if (roundWinner === "computer" || roundWinner === "player") {
+    playerScoreCount.textContent = `Player: ${playerScore}`
+    computerScoreCount.textContent = `Computer: ${computerScore}`
+  }
 }
 
 function openGameOverModal() {
