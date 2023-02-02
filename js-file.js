@@ -3,6 +3,7 @@
 let roundWinner = "";
 let computerScore = 0;
 let playerScore = 0;
+let round = 0;
 let choice = ["rock", "paper", "scissors"]
 
 // function to get computer selection
@@ -14,6 +15,7 @@ function computerPlay() {
 function playRound(playerChoice, computerChoice){
     if (playerChoice === computerChoice) {
       roundWinner = "tie";
+      round++;
         }
     else if (playerChoice === "rock") {
       if (computerChoice === "scissors") {
@@ -82,7 +84,7 @@ function playerChooses(playerChoice) {
   const computerChoice = computerPlay()
   playRound(playerChoice, computerChoice)
   updateChoices(playerChoice, computerChoice)
-  updateScore(roundWinner)
+  updateScore()
 
   if (gameOver()) {
     openGameOverModal()
@@ -122,11 +124,9 @@ function updateChoices(playerChoice, computerChoice) {
   }
 }
 
-function updateScore(roundWinner) {
-  if (roundWinner === "computer" || roundWinner === "player") {
+function updateScore() {
     playerScoreCount.textContent = `Player: ${playerScore}`
     computerScoreCount.textContent = `Computer: ${computerScore}`
-  }
 }
 
 function openGameOverModal() {
